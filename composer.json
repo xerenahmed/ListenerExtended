@@ -1,5 +1,5 @@
 {
-  "name": "xerenahmed/listener-await-wrapper",
+  "name": "xerenahmed/listener-extended",
   "type": "project",
   "license": "MIT",
   "require": {
@@ -7,6 +7,7 @@
   },
   "require-dev": {
     "pocketmine/pocketmine-mp": "^4.0.0",
+    "sof3/await-std": "dev-master",
     "phpstan/phpstan": "^1.8",
     "phpunit/phpunit": "^9.5",
     "friendsofphp/php-cs-fixer": "^3.10"
@@ -14,6 +15,11 @@
   "autoload": {
     "psr-0": {
       "xerenahmed\\law\\": "src/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "8.0"
     }
   },
   "scripts": {

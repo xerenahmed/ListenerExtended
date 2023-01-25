@@ -1,5 +1,5 @@
-name: ListenerAwaitWrapper
+name: ListenerExtended
 api: 4.0.0
-antigen: xerenahmed\law
+antigen: xerenahmed\ListenerExtended
 author: xerenahmed
 version: 1.0.0

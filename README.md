@@ -3,14 +3,14 @@
 Let's make PocketMine event listeners powerful!
 
 
-> **Info**
+> **Note**
 > 
 > An example plugin is in the [example](https://github.com/xerenahmed/ListenerExtended/tree/main/example) folder of root project.
 
 ## Table Of Contents
-[AwaitGenerator](#AwaitGenerator)  
-[Contexts](#Contexts)   
-[Cancel On Return False](#cancelOnReturnFalse)
+- [AwaitGenerator](#awaitgenerator)  
+- [Contexts](#contexts)   
+- [Cancel On Return False](#cancel-on-false-return)
 
 ## Quick Look
 

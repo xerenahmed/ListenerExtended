@@ -132,7 +132,6 @@ class ListenerExtended{
 			}
 
 			$returnType = $method->getReturnType()?->__toString();
-			var_dump($returnType);
 			if ($returnType !== null) {
 				$returnType = strtolower($returnType);
 			}

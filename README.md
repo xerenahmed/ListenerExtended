@@ -17,8 +17,8 @@ Let's make PocketMine event listeners powerful!
 ```php
 $awaitStd = AwaitStd::init($this);
 ListenerExtended::create()
-    ->cancelOnFalse() // if an event handler returns boolean type, cancel it
-    ->awaitGenerator() // if an event handler returns Generator type, execute it in AwaitGenerator
+    ->cancelOnFalse() // if an event handler declares return type as boolean and returns false, cancel it
+    ->awaitGenerator() // if an event handler declares return type as Generator type, execute it with AwaitGenerator
     // Contexts
     ->awaitContext($awaitStd) // pass only for await-generator handlers
     ->context($this) // pass to every handler, pass after awaitContext to await-generator handlers

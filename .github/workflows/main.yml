@@ -16,6 +16,22 @@ jobs:
         with:
           php-version: ${{matrix.php-version}}
           install-path: "./dev/bin"
+      
+      - name: Install Composer
+        run: curl -sS https://getcomposer.org/installer | php
+
+      - name: Restore Composer package cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/composer/files
+            ~/.cache/composer/vcs
+          key: "composer-v2-cache-${{ matrix.php }}-${{ hashFiles('./composer.lock') }}"
+          restore-keys: |
+            composer-v2-cache-
+      - name: Install Composer dependencies
+        run: php composer.phar install --prefer-dist --no-interaction
+
       - name: phpstan analyze
         run: php -dphar.readonly=0 -dmemory_limit=256M vendor/bin/phpstan analyze
   fmt:
@@ -32,4 +48,20 @@ jobs:
         with:
           php-version: ${{matrix.php-version}}
           install-path: "./dev/bin"
+      
+      - name: Install Composer
+        run: curl -sS https://getcomposer.org/installer | php
+
+      - name: Restore Composer package cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/composer/files
+            ~/.cache/composer/vcs
+          key: "composer-v2-cache-${{ matrix.php }}-${{ hashFiles('./composer.lock') }}"
+          restore-keys: |
+            composer-v2-cache-
+      - name: Install Composer dependencies
+        run: php composer.phar install --prefer-dist --no-interaction
+
       - run: php vendor/bin/php-cs-fixer fix --dry-run --diff

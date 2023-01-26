@@ -39,7 +39,6 @@ use function count;
 use function get_class;
 use function implode;
 use function is_a;
-use function is_array;
 use function method_exists;
 use function sprintf;
 use function strtolower;

@@ -2,19 +2,16 @@
   "name": "xerenahmed/listener-extended",
   "type": "project",
   "license": "MIT",
-  "require": {
-    "sof3/await-generator": "^3.4.2"
-  },
   "require-dev": {
+		"sof3/await-generator": "^3.4.2",
     "pocketmine/pocketmine-mp": "^4.0.0",
     "sof3/await-std": "dev-master",
-    "phpstan/phpstan": "^1.8",
-    "phpunit/phpunit": "^9.5",
-    "friendsofphp/php-cs-fixer": "^3.10"
+    "phpstan/phpstan": "^1.9.13",
+    "friendsofphp/php-cs-fixer": "^3.13.2"
   },
   "autoload": {
     "psr-0": {
-      "xerenahmed\\law\\": "src/"
+      "xerenahmed\\ListenerExtended\\": "src/"
     }
   },
   "config": {
